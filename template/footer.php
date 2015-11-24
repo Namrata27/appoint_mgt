@@ -223,14 +223,43 @@ for (var i=0;i<=6;i++)
     $('#fullday'+i).hide();
     $('#starttime'+i).hide();
    $('#endtime'+i).hide(); 
+    $('#starttime1'+i).hide();
+   $('#endtime1'+i).hide(); 
      } else {
     $('#fullday'+i).show();
     $('#starttime'+i).show();
     $('#endtime'+i).show(); 
+    $('#starttime1'+i).show();
+    $('#endtime1'+i).show(); 
     }
  
 }});
 </script>
+
+
+<script>
+$('.fullday123').change(function(){
+for (var i=0;i<=6;i++)
+{
+	//alert(i);
+  if($("#fullday"+i).prop("checked"))   
+  {
+    $('#starttime'+i).show();
+    $('#endtime'+i).show(); 
+    $('#starttime1'+i).show();
+    $('#endtime1'+i).show(); 
+    }
+    else 
+    {
+     $('#starttime'+i).hide();
+   $('#endtime'+i).hide(); 
+    $('#starttime1'+i).hide();
+   $('#endtime1'+i).hide(); 
+     }
+ 
+}});
+</script>
+
  
 
     <!-- DATA TABES SCRIPT -->

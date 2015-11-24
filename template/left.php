@@ -45,11 +45,10 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
-                        			  <li><a href="index.php"><i class="fa fa-circle-o"></i> Dashboard <small class="label pull-right bg-green"></small></a></li>
-
-           
-<li><a href="index.php?folder=customer&file=view"><i class="fa fa-circle-o"></i> Customer <small class="label pull-right bg-green"></small></a></li>
-                <li ><a href="index.php?folder=admin&file=view"><i class="fa fa-circle-o"></i> Admin</a></li>
+			<li><a href="index.php"><i class="fa fa-circle-o"></i> Dashboard <small class="label pull-right bg-green"></small></a></li>
+			<li><a href="index.php?folder=customer&file=view"><i class="fa fa-circle-o"></i> Customer <small class="label pull-right bg-green"></small></a></li>
+             <li ><a href="index.php?folder=admin&file=view"><i class="fa fa-circle-o"></i> Admin</a></li>
+             <li ><a href="index.php?folder=timeslot&file=view"><i class="fa fa-circle-o"></i>Time Slot</a></li>
                              
    
              

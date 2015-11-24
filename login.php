@@ -1,7 +1,7 @@
 <?php
 session_start();
 session_destroy();
-include($_SERVER['DOCUMENT_ROOT']."/appoint_manager/connection.php");
+include($_SERVER['DOCUMENT_ROOT']."/appoint_mgt/connection.php");
 if(isset($_POST['submit']))
 { 
 //print_r($_POST);

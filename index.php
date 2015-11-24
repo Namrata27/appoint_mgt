@@ -16,7 +16,7 @@ if(!isset($_SESSION['admin_id']))
 	//print_r($_SESSION);
 header('location:login.php');
 }
-include_once($_SERVER['DOCUMENT_ROOT']."/appoint_manager/connection.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/appoint_mgt/connection.php");
 if(isset($_GET['folder']))
 {
 	$folder=$_GET['folder'];

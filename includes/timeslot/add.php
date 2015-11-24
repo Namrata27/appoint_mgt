@@ -1,9 +1,7 @@
 <?php
 $starttime=array("10","11","12","1","2","3","4","5","6");
 ?>
-
 <section class="content">
-
           <div class="row">
             <div class="col-md-12">
               <div class="box box-primary">
@@ -11,6 +9,7 @@ $starttime=array("10","11","12","1","2","3","4","5","6");
                   <h3 class="box-title">Timing Setup</h3>
                 </div>			
                  <div class="box-body">
+                 <form method="post">
 			<table  id="example1" class="table table-striped table-bordered bootstrap-datatable datatable responsive">
 				<tr>
 				<td>
@@ -52,7 +51,7 @@ $starttime=array("10","11","12","1","2","3","4","5","6");
 						<th>Weekly off</th>
 						<th> Full Day </th>
 						<th> Start time To End Time</th>
-						
+						<th>Start time To End time</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -66,12 +65,12 @@ $starttime=array("10","11","12","1","2","3","4","5","6");
 					?>
 					<tr>
 					<td> <?php echo $days[$i]; ?></td>
-					<td><input type="checkbox" name="weekly_off" id="weekly_off<?php echo $i; ?>" class="week123"></td>
+					<td><input type="checkbox" name="weekly_off[<?php echo $i; ?>]" id="weekly_off<?php echo $i; ?>" class="week123"></td>
 					<td>
-					<input type="checkbox" name="fullday" id="fullday<?php echo $i;?>" >
+					<input type="checkbox" name="fullday[<?php echo $i; ?>]" id="fullday<?php echo $i;?>" class="fullday123">
 					</td>
 					<td>
-					<select name="starttime" id="starttime<?php echo $i;?>">
+					<select name="starttime[<?php //echo $i;?>]" id="starttime<?php echo $i;?>">
 					<option> start time</option>
 					<?php
 					foreach($starttime as $strttime)
@@ -87,7 +86,37 @@ $starttime=array("10","11","12","1","2","3","4","5","6");
 					<label for="exampleInputEmail1"> to </label>
 					
 					&nbsp;&nbsp;&nbsp;
-					<select name="endtime" id="endtime<?php echo $i;?>">
+					<select name="endtime[<?php //echo $i; ?>]" id="endtime<?php echo $i;?>">
+					<option> end time</option>
+					<?php
+					foreach($starttime as $strttime)
+					{
+						?>
+						<option value="<?php echo $strttime; ?>"><?php echo $strttime;?></option>
+						
+					<?php		
+					}
+					?>
+					</select>
+				</td>
+						<td>
+					<select name="starttime1[<?php //echo $i; ?>]" id="starttime1<?php echo $i;?>">
+					<option> start time</option>
+					<?php
+					foreach($starttime as $strttime)
+					{
+						?>
+						<option value="<?php echo $strttime; ?>"><?php echo $strttime;?></option>
+						
+					<?php		
+					}
+					?>
+					</select>&nbsp;&nbsp;&nbsp;
+					
+					<label for="exampleInputEmail1"> to </label>
+					
+					&nbsp;&nbsp;&nbsp;
+					<select name="endtime1[<?php //echo $i;?>]" id="endtime1<?php echo $i;?>">
 					<option> end time</option>
 					<?php
 					foreach($starttime as $strttime)
@@ -101,16 +130,21 @@ $starttime=array("10","11","12","1","2","3","4","5","6");
 					</select>
 				</td>
 
+
 					</tr>
 					<?php
 					}
 				
 				?>
+				<tr>
+				<td colspan="5"><center><input type="submit" name="timeslotsubmit" value="Time Slot" class="btn btn-default"></center></td>
+				</tr>
 				
 				
 				</tbody>
 				</table>				
 			</table>
+                 </form>
                  </div>
               </div>
             </div>
